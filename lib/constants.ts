@@ -3,15 +3,15 @@ export const SITE = {
   tagline: "Modern Culinary Experience",
   description:
     "Experience a symphony of seasonal ingredients and master craftsmanship curated by award-winning chefs.",
-  url: "https://aurarestaurant.com",
-  email: "reservations@aurarestaurant.com",
-  phone: "+1 (555) 839-2041",
+  url: "https://aurarestaurant.co.ke",
+  email: "reservations@aurarestaurant.co.ke",
+  phone: "+254 700 000 000",
   address: {
-    street: "442 Culinary Ave, Suite 100",
-    city: "New York",
-    region: "NY",
-    postal: "10001",
-    country: "US",
+    street: "442 Westlands Avenue, Suite 100",
+    city: "Nairobi",
+    region: "Nairobi County",
+    postal: "00100",
+    country: "KE",
   },
   social: {
     instagram: "https://instagram.com/aurarestaurant",
@@ -19,6 +19,17 @@ export const SITE = {
     tripadvisor: "https://tripadvisor.com/aurarestaurant",
   },
 } as const;
+
+/* Currency + locale — change here to switch markets */
+export const CURRENCY = "KES" as const;
+export const LOCALE = "en-KE" as const;
+
+/* Reservation form endpoint (Web3Forms — frontend only, no backend) */
+export const RESERVATION_ENDPOINT =
+  "https://api.web3forms.com/submit" as const;
+
+export const RESERVATION_ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? "";
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
@@ -82,7 +93,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "scallops",
     name: "Pan-Seared Scallops",
-    price: 24,
+    price: 2400,
     description:
       "Served with parsnip puree, crispy pancetta, and citrus herb oil.",
     category: "starters",
@@ -93,7 +104,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "wagyu",
     name: "Truffle Wagyu Filet",
-    price: 62,
+    price: 6200,
     description:
       "Grade A5 Wagyu, potato fondant, wild mushrooms, and black truffle jus.",
     category: "mains",
@@ -105,7 +116,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "chocolate-dome",
     name: "Dark Chocolate Dome",
-    price: 18,
+    price: 1800,
     description:
       "Valrhona chocolate mousse, raspberry coulis, and edible gold leaf.",
     category: "desserts",
@@ -116,7 +127,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "old-fashioned",
     name: "Smoked Rosemary Old Fashioned",
-    price: 20,
+    price: 2000,
     description:
       "Small-batch bourbon, Angostura bitters, maple, smoked with fresh rosemary.",
     category: "drinks",
@@ -127,7 +138,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "burrata",
     name: "Heirloom Burrata",
-    price: 21,
+    price: 2100,
     description:
       "Creamy burrata, heirloom tomatoes, basil oil, aged balsamic, sea salt.",
     category: "starters",
@@ -138,7 +149,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "lobster-risotto",
     name: "Lobster Saffron Risotto",
-    price: 48,
+    price: 4800,
     description:
       "Butter-poached Maine lobster, carnaroli rice, saffron, parmesan crisp.",
     category: "mains",
@@ -149,7 +160,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "tiramisu",
     name: "Deconstructed Tiramisu",
-    price: 16,
+    price: 1600,
     description:
       "Espresso-soaked ladyfingers, mascarpone cream, cocoa nib tuile.",
     category: "desserts",
@@ -159,7 +170,7 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: "negroni",
     name: "Barrel-Aged Negroni",
-    price: 19,
+    price: 1900,
     description:
       "Aged 90 days in oak. Gin, Campari, sweet vermouth, orange zest.",
     category: "drinks",
@@ -225,4 +236,4 @@ export const ABOUT_FEATURES = [
 ] as const;
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://aurarestaurant.co.ke";
