@@ -1,12 +1,22 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+import { CURRENCY, LOCALE } from "./constants";
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatPrice(value: number): string {
-  return `$${value.toFixed(0)}`;
+export function formatPrice(
+  value: number,
+  currency: string = CURRENCY,
+  locale: string = LOCALE,
+): string {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+    maximumFractionDigits: 0,
+  }).format(value);
 }
 
 export function formatTime24to12(time: string): string {
