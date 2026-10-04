@@ -3,9 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faFacebookF,
-  faTripadvisor,
 } from "@fortawesome/free-brands-svg-icons";
-import { faLocationDot, faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLocationDot,
+  faPhone,
+  faEnvelope,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
 import { HOURS, NAV_LINKS, SITE } from "@/lib/constants";
 
@@ -35,7 +39,7 @@ export default function Footer() {
                 <FontAwesomeIcon icon={faFacebookF} />
               </SocialLink>
               <SocialLink href={SITE.social.tripadvisor} label="Tripadvisor">
-                <FontAwesomeIcon icon={faTripadvisor} />
+                <FontAwesomeIcon icon={faStar} />
               </SocialLink>
             </div>
           </div>
