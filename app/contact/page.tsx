@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 import {
   faLocationDot,
   faPhone,
@@ -124,7 +125,7 @@ function InfoRow({
   label,
   children,
 }: {
-  icon: never;
+  icon: IconDefinition;
   label: string;
   children: React.ReactNode;
 }) {
