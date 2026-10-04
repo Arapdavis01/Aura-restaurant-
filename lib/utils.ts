@@ -12,11 +12,16 @@ export function formatPrice(
   currency: string = CURRENCY,
   locale: string = LOCALE,
 ): string {
-  return new Intl.NumberFormat(locale, {
-    style: "currency",
-    currency,
-    maximumFractionDigits: 0,
-  }).format(value);
+  try {
+    return new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency,
+      maximumFractionDigits: 0,
+    }).format(value);
+  } catch {
+    // Fallback if the runtime does not support the locale/currency combo
+    return `KSh ${value.toLocaleString("en-KE")}`;
+  }
 }
 
 export function formatTime24to12(time: string): string {
