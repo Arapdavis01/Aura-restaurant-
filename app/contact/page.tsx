@@ -5,11 +5,11 @@ import {
   faPhone,
   faEnvelope,
   faClock,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
   faFacebookF,
-  faTripadvisor,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Reveal from "@/components/ui/Reveal";
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   <FontAwesomeIcon icon={faFacebookF} />
                 </SocialIcon>
                 <SocialIcon href={SITE.social.tripadvisor} label="Tripadvisor">
-                  <FontAwesomeIcon icon={faTripadvisor} />
+                  <FontAwesomeIcon icon={faStar} />
                 </SocialIcon>
               </div>
 
